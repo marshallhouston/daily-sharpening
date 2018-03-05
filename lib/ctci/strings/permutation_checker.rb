@@ -3,11 +3,10 @@
 class PermutationChecker
 
   def self.permutations(string1, string2)
-    result = false
     if string1.length != string2.length
-      return result
+      return false
     end
-    sorter(string1) == sorter(string2) ? result = true : result
+    sorter(string1) == sorter(string2)
   end
 
   private
