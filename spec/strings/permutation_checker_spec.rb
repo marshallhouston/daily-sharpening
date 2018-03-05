@@ -14,6 +14,24 @@ describe PermutationChecker do
         result = PermutationChecker.permutations("hi", "ihs")
         expect(result).to be false
       end
+
+      context 'case sensitivity' do
+        it 'can differentiate between cases' do
+          result1 = PermutationChecker.permutations("Hi", "iH")
+          expect(result1).to be true
+          result2 = PermutationChecker.permutations("HoW", "how")
+          expect(result2).to be false
+        end
+      end
+
+      context 'with whitespace' do
+        it 'can differeniate between whitespaces' do
+          result1 = PermutationChecker.permutations("H i", "iH ")
+          expect(result1).to be true
+          result2 = PermutationChecker.permutations("H o W", " how")
+          expect(result2).to be false
+        end
+      end
     end
   end
 end
