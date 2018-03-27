@@ -14,6 +14,11 @@ describe MultipleSummer do
 
       expect(MultipleSummer.sum(1_000)).to eq 233_168
       end
+      context 'when a negative number is passed in' do
+        it 'returns 0' do
+          expect(MultipleSummer.sum(-2)).to eq 0
+        end
+      end
     end
   end
 end

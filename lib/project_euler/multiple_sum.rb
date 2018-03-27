@@ -1,7 +1,7 @@
 class MultipleSummer
 
   def self.sum(max)
-    i = 0
+    i = 1
     sum = 0
     while i < max
       multiple?(i) ? sum += i : sum
